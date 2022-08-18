@@ -2,12 +2,13 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<form>
-  <div class="row justify-content-center" style="margin-top:20%;" >
-    <label for="exampleInputEmail1">Ingrese nombre</label>
-    <input type="pasword" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu nombre">
+<div class="row justify-content-center" style="margin:20%;">
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+   <button type="alert" class="btn btn-primary"  href='@Url.Action("player", "Home")'>Empezar a jugar</button>
+    <img src="/DelMoro.jpg" width="800" height="auto"> 
   </div>
-    <button type="alert" class="btn btn-primary" >Jugar</button>
-</form>
+ </div> 
+</div>
 </body>
 

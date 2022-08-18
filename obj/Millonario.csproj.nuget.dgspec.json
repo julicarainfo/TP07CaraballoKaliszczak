@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\46603069\\Desktop\\Millonario\\Millonario.csproj": {}
+    "C:\\Users\\46603069\\Desktop\\TP07CaraballoKaliszczak\\Millonario.csproj": {}
   },
   "projects": {
-    "C:\\Users\\46603069\\Desktop\\Millonario\\Millonario.csproj": {
+    "C:\\Users\\46603069\\Desktop\\TP07CaraballoKaliszczak\\Millonario.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\46603069\\Desktop\\Millonario\\Millonario.csproj",
+        "projectUniqueName": "C:\\Users\\46603069\\Desktop\\TP07CaraballoKaliszczak\\Millonario.csproj",
         "projectName": "Millonario",
-        "projectPath": "C:\\Users\\46603069\\Desktop\\Millonario\\Millonario.csproj",
+        "projectPath": "C:\\Users\\46603069\\Desktop\\TP07CaraballoKaliszczak\\Millonario.csproj",
         "packagesPath": "C:\\Users\\46603069\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\46603069\\Desktop\\Millonario\\obj\\",
+        "outputPath": "C:\\Users\\46603069\\Desktop\\TP07CaraballoKaliszczak\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -18,6 +18,16 @@ public class HomeController : Controller
         return View();
     }
 
+     public IActionResult player()
+    {
+        return View();
+    }
+
+     public IActionResult preguntas()
+    {
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();
