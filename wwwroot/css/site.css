@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 14px;
 }
@@ -18,7 +23,10 @@ body {
 }
 #HomeBack{
   background-image:url("./../HomeBackground.jpg");
-  background-size: cover;   
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 .Logo{
   width:5%;
