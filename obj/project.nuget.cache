@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "M6/O7bc7/Rpljqkucf4589kwdEumw8+OBe8+bzyN9B5seGHqVvwLf7avyXq58Q9glBbafJuOTMMydvENwRlv3g==",
   "success": true,
   "projectFilePath": "c:\\Users\\46916289\\Desktop\\TP07CaraballoKaliszczak\\TP07CaraballoKaliszczak\\Millonario.csproj",
@@ -15,5 +16,11 @@
     "C:\\Users\\46916289\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\46916289\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "3pOk1yXRIWwKiH7wbyzjlm99seQOoSvFGDbA8Mldagi8mLdusViO7lYY4QceQUrfNGk8NBSOBx+pz2nRLRU0dw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\46603069\\Desktop\\TP07CaraballoKaliszczak\\TP07CaraballoKaliszczak\\Millonario.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> 661e3fce7d85463a2d5f3c54de274c126008a2e6
   "logs": []
 }

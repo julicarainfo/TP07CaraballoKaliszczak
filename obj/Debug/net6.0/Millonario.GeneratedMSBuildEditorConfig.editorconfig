@@ -8,6 +8,7 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Millonario
 build_property.RootNamespace = Millonario
+<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\46916289\Desktop\TP07CaraballoKaliszczak\TP07CaraballoKaliszczak\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -48,5 +49,43 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/46916289/Desktop/TP07CaraballoKaliszczak/TP07CaraballoKaliszczak/Views/Shared/_Layout.cshtml]
+=======
+build_property.ProjectDir = C:\Users\46603069\Desktop\TP07CaraballoKaliszczak\TP07CaraballoKaliszczak\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\46603069\Desktop\TP07CaraballoKaliszczak\TP07CaraballoKaliszczak
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/46603069/Desktop/TP07CaraballoKaliszczak/TP07CaraballoKaliszczak/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/46603069/Desktop/TP07CaraballoKaliszczak/TP07CaraballoKaliszczak/Views/Home/preguntas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcmVndW50YXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/46603069/Desktop/TP07CaraballoKaliszczak/TP07CaraballoKaliszczak/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/46603069/Desktop/TP07CaraballoKaliszczak/TP07CaraballoKaliszczak/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/46603069/Desktop/TP07CaraballoKaliszczak/TP07CaraballoKaliszczak/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/46603069/Desktop/TP07CaraballoKaliszczak/TP07CaraballoKaliszczak/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/46603069/Desktop/TP07CaraballoKaliszczak/TP07CaraballoKaliszczak/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/46603069/Desktop/TP07CaraballoKaliszczak/TP07CaraballoKaliszczak/Views/Shared/_Layout.cshtml]
+>>>>>>> 661e3fce7d85463a2d5f3c54de274c126008a2e6
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-k55hwuf4bh
