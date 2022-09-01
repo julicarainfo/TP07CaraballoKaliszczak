@@ -28,6 +28,14 @@ body {
   top: 0;
   left: 0;
 }
+
+#HomeBackPregunta{
+  background-color: rgb(7, 7, 95);
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+}
 .Logo{
   width:5%;
   height: auto;
@@ -35,11 +43,32 @@ body {
 #JumbPreguntas
 {
   margin-top: 10%;
-  margin-left: 20%;
+  margin-left: 5%;
+  text-align: center;
 }
 
 #Opciones
 {
 
   margin-top: 10%;
+}
+
+
+.boxPregunta
+{
+  background: rgb(235, 193, 5);
+  width: 100%;
+  height: 250%;
+}
+
+#idJumbo
+{
+  background-color: rgb(235, 193, 5);
+}
+
+.pozo
+{
+  position: fixed;
+  bottom: 40%;
+  right: 1%;
 }
