@@ -56,7 +56,15 @@ body {
 
 .boxPregunta
 {
-  background: rgb(235, 193, 5);
+  border-right-width: 1em;
+  border-Left-width: 1em;
+  border-TOP-width: 1em;
+  border-Bottom-width: 1em;
+  border-top-color:  rgb(235, 193, 5);
+  border-Right-color:  rgb(235, 193, 5);
+  border-Left-color:  rgb(235, 193, 5);
+  border-BOTTOm-color:  rgb(235, 193, 5);
+  background: rgb(9, 144, 197);
   width: 100%;
   height: 250%;
 }
@@ -71,4 +79,13 @@ body {
   position: fixed;
   bottom: 40%;
   right: 1%;
+}
+
+.comodines
+{
+  background: rgb(235, 193, 5);
+  width:auto;
+  height: auto;
+  position: fixed;
+  right: auto;
 }
