@@ -1,36 +1,66 @@
 <body id="HomeBackPregunta">
-   <div class="row justify-content-center" id="JumbPreguntas">
+
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+          <img src="./../Logo.ico" width="100px" height="auto">
+        </a>
+      </div>
+      <div class="container-fluid">
+          <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="">
+                <h4>50/50</h4>
+          </a>
+        </div>
+        <div class="container-fluid">
+          <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="">
+                <h4>Voto</h4>
+          </a>
+        </div>
+        <div class="container-fluid">
+          <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="">
+                <h4>2DA OP</h4>
+          </a>
+        </div>
+  </nav>
+
+  <div class="row justify-content-center" id="JumbPreguntas">
     <div class="jumbotron jumbotron-fluid" id="idJumbo">
       <div class="container">
         <h3 class="display-4">¿A que se dedica el verdadero ruclot?</h3>
       </div>
-     </div>
     </div>
+  </div>
+  <form action="">
    <div class="container">
     <div class="row justify-content-center">
       <div class="col-sm-4" id="Opciones">
-        <div class="boxPregunta"> Lauti se dedica a jugar a las ligas de las leyendas </div>
+        <input class="boxPregunta btn-warning" type="button" value="Lauti se dedica a jugar a las ligas de las leyendas" id="">
       </div>
       <div class="col-sm-4" id="Opciones">
-        <div class="boxPregunta"> Lauti se dedica a jugar a las ligas de las leyendas </div>
+       <input class="boxPregunta btn-warning" type="button" value="Lauti se dedica a jugar a las ligas de las leyendas" id="">
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-sm-4" id="Opciones">
-        <div class="boxPregunta"> Lauti se dedica a jugar a las ligas de las leyendas </div>
+        <input class="boxPregunta btn-warning" type="button" value="Lauti se dedica a jugar a las ligas de las leyendas" id="">
       </div>
       <div class="col-sm-4" id="Opciones">
-        <div class="boxPregunta"> Lauti se dedica a jugar a las ligas de las leyendas </div>
+         <input class="boxPregunta btn-warning" type="button" value="Lauti se dedica a jugar a las ligas de las leyendas" id="">
       </div>
     </div>
    </div>
-   <ul class="list-group">
+   <div class="enviarPlantarse">
+   <button class="btn btn-primary"><a href='@Url.Action("perdida", "preguntas")' class="text-white">Enviar</a></button>
+   <button class="btn btn-primary"><a href='@Url.Action("perdida", "preguntas")' class="text-white">Plantarse</a></button>
+   </div>
+  </form>
+  <ul class="list-group">
     <div class="pozo">
-     <li class="list-group-item">1.000.000</li>
-     <li class="list-group-item">500.000</li>
-     <li class="list-group-item">250.000</li>
-     <li class="list-group-item">100.000</li>
-     <li class="list-group-item">1000</li>
+      <li class="list-group-item">1.000.000</li>
+      <li class="list-group-item">500.000</li>
+      <li class="list-group-item">250.000</li>
+      <li class="list-group-item">100.000</li>
+      <li class="list-group-item">1000</li>
     </div>
-   </ul>
+  </ul>
 </body>
