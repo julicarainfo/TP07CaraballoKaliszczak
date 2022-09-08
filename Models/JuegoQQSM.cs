@@ -10,7 +10,7 @@ public static class JuegoQQSM
 {
     private static int PreguntaActual;
     private static char RespuestaCorrectaActual;
-    private static int PocicionPozo;
+    private static int PosicionPozo;
     private static int PozoAcumuladoSeguro;
     private static int PozoAcumulado;
     private static bool Comodin5050;
@@ -23,8 +23,8 @@ public static class JuegoQQSM
     public static void IniciarJuego(string Nombre)
     {
         PreguntaActual=1;
-        RespuestaCorrectaActual=" ";
-        PocicionPozo=0;
+        RespuestaCorrectaActual=' ';
+        PosicionPozo=0;
         PozoAcumuladoSeguro=0;
         PozoAcumulado=0;
         Comodin5050=true;
@@ -54,7 +54,7 @@ public static class JuegoQQSM
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sql ="INSERT INTO Jugadores (Nombre,FechaHora,Pozo_Ganado,ComodinDobleChance,Comodin50,ComodinSaltear) VALUES (@Nombre,@FechaAhora,@PozoAcumuladoSeguro,@ComodinDobleChance,@Comodin5050,@ComodinSaltearPregunta)";
-            Player = db.Execute(sql, new {PNombre=Nombre,PFechaHora=FechaAhora,PPozo_Ganado=PozoAcumuladoSeguro,PComodinDobleChance=ComodinDobleChance,PComodin50=Comodin5050,PComodinSaltear=ComodinSaltearPregunta});
+            Player = db.Execute(sql, new {@Nombre=Nombre,@FechaHora=FechaAhora,@Pozo_Ganado=PozoAcumuladoSeguro,@ComodinDobleChance=ComodinDobleChance,@Comodin50=Comodin5050,@ComodinSaltear=ComodinSaltearPregunta});
         }     
         Player=new Jugador(0,Nombre,FechaAhora,PozoAcumuladoSeguro,comodinDobleChance,Comodin5050,ComodinSaltearPregunta);
     }   
@@ -65,16 +65,60 @@ public static class JuegoQQSM
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sql ="SELECT * FROM Preguntas WHERE idPregunta = @PreguntaActual";
-            PreguntaDeAhora = db.QueryFirstOrDefault<Pregunta>(sql, new {PidPregunta = PreguntaActual});
+            PreguntaDeAhora = db.QueryFirstOrDefault<Pregunta>(sql, new {@PreguntaActual = PreguntaActual});
         }     
         return PreguntaDeAhora;
     } 
     public static List<Respuesta> ObtenerRespuestas()
     {
         List <Respuesta> _listaRespuesta = new List<Respuesta>();
-        string sql = " ";
-        _listaRespuesta = db.Query<Respuesta>(sql, new{}).ToList();
+         using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+        string sql = "SELECT * FROM Respuesta WHERE idPregunta = @PreguntaActual ";
+        _listaRespuesta = db.Query<Respuesta>(sql, new{@PreguntaActual = PreguntaActual}).ToList();
+        }  
+        if (_listaRespuesta[PreguntaActual].correcta = true)
+        {
+            RespuestaCorrectaActual = _listaRespuesta[PreguntaActual].opcionRespuesta;
+        }
+        return _listaRespuesta;   
     }
+    public static bool RespuestaUsuario(char opcion, char opcionComodin, bool ComodinDobleChance)
 
+    {
+        bool seguir = true;
+        if (ComodinDobleChance=false)
+        {
+            using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql ="UPDATE Jugador SET ComodinDobleChance = 0 WHERE idJugador = @idJugador  ";
+            db.Execute(sql, new {@idJugador = Player.idJugador});
+        }     
+        }
+        if (opcion != RespuestaCorrectaActual)
+            {
+                seguir=false;
+            }
+        else
+        {
+            PosicionPozo++;
+            if (ListaPozo[PosicionPozo].valorSeguro = true)
+            {
+                PozoAcumuladoSeguro = ListaPozo[PosicionPozo].importe;
+            } 
+            return seguir;
+        }
 
+    }
+    public static List<Pozo> ListarPozo()
+    { 
+        return ListaPozo;
+    }
+    public static int DevolverPosicionPozo()
+    {
+        return PosicionPozo;
+    }
+    public static char[] Descartar50()
+    {
+    }
 }
