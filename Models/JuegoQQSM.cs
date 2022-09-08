@@ -18,7 +18,6 @@ public static class JuegoQQSM
     private static bool ComodinSaltearPregunta;
     private static List<Pozo> ListaPozo;
     private static Jugador Player;
-    private static List<Respuesta> ListaRespuestas;
     private static string _connectionString = @"Server=DESKTOP-A-PHZ2-CIDI-030\SQLEXPRESS;DataBase = Millonario;Trusted_Connection=True;";
 
     public static void IniciarJuego(string Nombre)
@@ -72,8 +71,9 @@ public static class JuegoQQSM
     } 
     public static List<Respuesta> ObtenerRespuestas()
     {
-        string sql = "";
-        _listaJugadores = db.Query<Respuesta>(sql, new{}).ToList();
+        List <Respuesta> _listaRespuesta = new List<Respuesta>();
+        string sql = " ";
+        _listaRespuesta = db.Query<Respuesta>(sql, new{}).ToList();
     }
 
 
