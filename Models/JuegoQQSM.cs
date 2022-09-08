@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -109,6 +110,7 @@ public static class JuegoQQSM
             return seguir;
         }
 
+<<<<<<< HEAD
     }
     public static List<Pozo> ListarPozo()
     { 
@@ -122,3 +124,6 @@ public static class JuegoQQSM
     {
     }
 }
+=======
+}
+>>>>>>> 59f5063c0bc98266d7bed53212aca934b0b78240
