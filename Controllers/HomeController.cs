@@ -21,10 +21,12 @@ public class HomeController : Controller
         return View();
     }
 
-     public IActionResult preguntas()
+     public IActionResult preguntas(char opcion, char opcionComodin, bool ComodinDobleChance)
     {
         Pregunta pregunta=JuegoQQSM.ObtenerProximaPregunta();
-        List<Respuesta> respuesta=JuegoQQSM.ObtenerRespuestas();
+        ViewBag.listaRespuesta=JuegoQQSM.ObtenerRespuestas();
+        bool respuestaUsuario=JuegoQQSM.RespuestaUsuario(opcion, opcionComodin, ComodinDobleChance);
+        ViewBag.ListaPozo=JuegoQQSM.ListarPozo();
         return View();
     }
 

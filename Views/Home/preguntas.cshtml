@@ -54,13 +54,12 @@
    <button class="btn btn-primary"><a href='@Url.Action("perdida", "preguntas")' class="text-white">Plantarse</a></button>
    </div>
   </form>
-  <ul class="list-group">
-    <div class="pozo">
-      <li class="list-group-item">1.000.000</li>
-      <li class="list-group-item">500.000</li>
-      <li class="list-group-item">250.000</li>
-      <li class="list-group-item">100.000</li>
-      <li class="list-group-item">1000</li>
-    </div>
-  </ul>
+     @foreach (Pozo pozo in ViewBag.ListaPozo)
+     {
+       <ul class="list-group">
+        <div class="pozo">
+          <li class="list-group-item">@pozo</li>
+        </div>
+       </ul>
+     }
 </body>

@@ -16,7 +16,7 @@ public static class JuegoQQSM
     private static bool Comodin5050;
     private static bool ComodinDobleChance;
     private static bool ComodinSaltearPregunta;
-    private static List<Pozo> ListaPozo;
+    private static List<Pozo> ListaPozo=new List<Pozo>();
     private static Jugador Player;
     private static string _connectionString = @"Server=DESKTOP-C3LD3QR\SQLEXPRESS;DataBase = Millonario;Trusted_Connection=True;";
 
@@ -53,15 +53,15 @@ public static class JuegoQQSM
         DateTime FechaAhora = DateTime.Now;  
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql ="INSERT INTO Jugadores (Nombre,FechaHora,Pozo_Ganado,ComodinDobleChance,Comodin50,ComodinSaltear) VALUES (@Nombre,@FechaAhora,@PozoAcumuladoSeguro,@ComodinDobleChance,@Comodin5050,@ComodinSaltearPregunta)";
-            Player = db.Execute(sql, new {@Nombre=Nombre,@FechaHora=FechaAhora,@Pozo_Ganado=PozoAcumuladoSeguro,@ComodinDobleChance=ComodinDobleChance,@Comodin50=Comodin5050,@ComodinSaltear=ComodinSaltearPregunta});
+            string sql ="INSERT INTO Jugadores (Nombre,FechaHora,Pozo_Ganado,ComodinDobleChance,Comodin50,ComodinSaltear) VALUES (@pNombre,@pFechaAhora,@pPozoAcumuladoSeguro,@pComodinDobleChance,@pComodin50,@pComodinSaltearPregunta)";
+            db.Execute(sql, new {pNombre=Nombre,pFechaAHora=FechaAhora,pPozoAcumuladoSeguro=PozoAcumuladoSeguro,pComodinDobleChance=ComodinDobleChance,pComodin50=Comodin5050,pComodinSaltearPregunta=ComodinSaltearPregunta});
         }     
-        Player=new Jugador(0,Nombre,FechaAhora,PozoAcumuladoSeguro,comodinDobleChance,Comodin5050,ComodinSaltearPregunta);
+        Player=new Jugador(0,Nombre,FechaAhora,PozoAcumuladoSeguro,ComodinDobleChance,Comodin5050,ComodinSaltearPregunta);
     }   
     public static Pregunta ObtenerProximaPregunta()
     {
         PreguntaActual++;
-        Pregunta PreguntaDeAhora = null;
+        Pregunta PreguntaDeAhora = new Pregunta();
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sql ="SELECT * FROM Preguntas WHERE idPregunta = @PreguntaActual";
@@ -102,13 +102,12 @@ public static class JuegoQQSM
         else
         {
             PosicionPozo++;
-            if (ListaPozo[PosicionPozo].valorSeguro = true)
+            if (ListaPozo[PosicionPozo].valorSeguro == true)
             {
                 PozoAcumuladoSeguro = ListaPozo[PosicionPozo].importe;
             } 
-            return seguir;
         }
-
+           return seguir;
 
     }
     public static List<Pozo> ListarPozo()
@@ -119,7 +118,9 @@ public static class JuegoQQSM
     {
         return PosicionPozo;
     }
+    /*
     public static char[] Descartar50()
     {
     }
+    */
 }
