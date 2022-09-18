@@ -13,13 +13,11 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(string Nombre)
     {
-        return View();
-    }
-
-     public IActionResult player()
-    {
+        JuegoQQSM.IniciarJuego(Nombre);
+        player=new Jugador();
+        ViewBag.player=player;
         return View();
     }
 

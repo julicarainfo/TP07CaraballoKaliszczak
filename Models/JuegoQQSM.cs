@@ -19,7 +19,7 @@ public static class JuegoQQSM
     private static bool ComodinSaltearPregunta;
     private static List<Pozo> ListaPozo;
     private static Jugador Player;
-    private static string _connectionString = @"Server=DESKTOP-A-PHZ2-CIDI-030\SQLEXPRESS;DataBase = Millonario;Trusted_Connection=True;";
+    private static string _connectionString = @"Server=DESKTOP-C3LD3QR\SQLEXPRESS;DataBase = Millonario;Trusted_Connection=True;";
 
     public static void IniciarJuego(string Nombre)
     {
@@ -110,7 +110,7 @@ public static class JuegoQQSM
             return seguir;
         }
 
-<<<<<<< HEAD
+
     }
     public static List<Pozo> ListarPozo()
     { 
@@ -124,6 +124,4 @@ public static class JuegoQQSM
     {
     }
 }
-=======
-}
->>>>>>> 59f5063c0bc98266d7bed53212aca934b0b78240
+
