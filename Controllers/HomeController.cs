@@ -16,13 +16,15 @@ public class HomeController : Controller
     public IActionResult Index(string Nombre)
     {
         JuegoQQSM.IniciarJuego(Nombre);
-        player=new Jugador();
+        Jugador player=new Jugador();
         ViewBag.player=player;
         return View();
     }
 
      public IActionResult preguntas()
     {
+        Pregunta pregunta=JuegoQQSM.ObtenerProximaPregunta();
+        List<Respuesta> respuesta=JuegoQQSM.ObtenerRespuestas();
         return View();
     }
 
